@@ -1,0 +1,5 @@
+name: "Obfuscate"
+description: "Obfuscate your Javascript code in seconds!"
+runs:
+  using: "node12"
+  main: "index.js"
