@@ -1,5 +1,8 @@
-name: "Obfuscate"
+name: "Obfuscate-Javascript"
 description: "Obfuscate your Javascript code in seconds!"
+branding:
+  icon: "camera-off"
+  color: "red"
 runs:
   using: "node12"
   main: "index.js"
