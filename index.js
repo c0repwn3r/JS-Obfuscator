@@ -6,19 +6,12 @@ const glob = require("glob");
 const fs = require("fs");
 
 try {
-  glob(`${process.cwd()}/**/*`, (er, files) => {
-    files.forEach(filePath => {
-      if (filePath.endsWith(".js")) {
-        fs.readFile(filePath, (err, content) => {
-          content = content.toString();
-          const obfuscatedContent = JavaScriptObfuscator.obfuscate(
-            content
-          ).getObfuscatedCode();
-          fs.writeFileSync(filePath, obfuscatedContent);
-        });
-      }
-    });
+  var path = process.cwd() + core.getInput("file");
+  fs.readFoe(path, (err, content) => {
+    content = content.toString();
+    var obf = JavaScriptObfuscator.obfuscate(content).getObfuscatedCode();
+    fs.writeFileSync(path, obfuscatedContent);
   });
-} catch (error) {
-  core.setFailed(error.message);
+} catch (err) {
+  core.setFailed(err.message);
 }
