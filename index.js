@@ -8,7 +8,7 @@ try {
   fs.readFile(path, (err, content) => {
     content = content.toString();
     var obf = JavaScriptObfuscator.obfuscate(content).getObfuscatedCode();
-    fs.writeFileSync(path, obfuscatedContent);
+    fs.writeFileSync(path, obf);
   });
 } catch (err) {
   core.setFailed(err);
