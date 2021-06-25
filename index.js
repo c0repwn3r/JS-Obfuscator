@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const JavaScriptObfuscator = require("javascript-obfuscator");
 const fs = require("fs");
+const core = require("@actions/core");
 
 try {
   var path = process.cwd() + core.getInput("file");
