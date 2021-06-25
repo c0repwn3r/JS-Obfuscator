@@ -4,6 +4,9 @@ inputs:
   file:
     description: "File to obf"
     required: true
+  doDebugProtection:
+    description: "Enable debug protection or not"
+    required: true
 branding:
   icon: "camera-off"
   color: "red"
