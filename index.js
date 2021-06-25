@@ -3,12 +3,12 @@ const JavaScriptObfuscator = require("javascript-obfuscator");
 const fs = require("fs");
 
 try {
-  var path = process.cwd() + "/static/scripts/client.js";
+  var path = process.cwd() + core.getInput("file");
   fs.readFile(path, (err, content) => {
     content = content.toString();
     var obf = JavaScriptObfuscator.obfuscate(content).getObfuscatedCode();
     fs.writeFileSync(path, obfuscatedContent);
   });
 } catch (err) {
-  process.exit(0);
+  core.setFailed(err);
 }
