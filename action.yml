@@ -1,5 +1,9 @@
 name: "Obfuscate-Javascript"
 description: "Obfuscate your Javascript code in seconds!"
+inputs:
+  file:
+    description: "File to obf"
+    required: true
 branding:
   icon: "camera-off"
   color: "red"
