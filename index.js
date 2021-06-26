@@ -41,7 +41,7 @@ const medium = {
     identifierNamesGenerator: 'hexadecimal',
     log: false,
     numbersToExpressions: true,
-    renameGlobals: false,
+    renameGlobals: true,
     rotateStringArray: true,
     selfDefending: true,
     shuffleStringArray: true,
